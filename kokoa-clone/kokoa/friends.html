@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends - Kokoa Talk</title>
+</head>
+<body>
+    <div class="status-bar">
+        <div class="status-bar__column">
+            <span>No Service</span>
+            <i class="fas fa-wifi"></i><!--WiFi icon-->
+        </div>
+        <div class="status-bar__column">
+            <span>18:43</span>
+        </div>
+        <div class="status-bar__column">
+            <span>110%</span>
+            <i class="fas fa-battery-full fa-lg"></i><!--battery icon-->
+            <i class="fas fa-bolt"></i><!--lightning icon-->
+        </div>
+    </div>
+    
+    <header class="screen-header">
+        <h1 class="screen-header__title">Friends</h1>
+        <div class="screen-header__icons">
+            <span><i class="fas fa-search fa-lg"></i></span>
+            <span><i class="fas fa-music fa-lg"></i></span>
+            <span><i class="fas fa-cog fa-lg"></i></span>
+        </div>
+    </header>
+
+    <a id="friends-display-link">
+        <i class="fas fa-info-circle"></i> Friends' Names Display <i class="fas fa-chevron-right fa-xs"></i>
+    </a>
+
+    <main class="friends-screen">
+        <div class="user-component">
+            <div class="user-component__column">
+                <img src="data:image/jpeg;base64,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" class="user-component__avatar user-component__avatar--xl"/>
+                <div class="user-component__text">
+                    <h4 class="user-component__title">YongJae</h4>
+                  <!--  <h6 class="user-component__subtitle">this text whatever</h6>-->
+                </div>
+            </div>
+            <div class="user-componetn__column"></div>
+        </div>
+        <div class="friends-screen__channel">
+            <div class="friends-screen__channel-header">
+                <span>Channel</span>
+                <i class="fas fa-chevron-up fa-xs"></i>
+            </div>
+            <div class="user-component">
+                <div class="user-component__column">
+                    <img src="data:image/jpeg;base64,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" class="user-component__avatar user-component__avatar--sm"/>
+                    <div class="user-component__text">
+                        <h4 class="user-component__title user-component__title--not-bold">Channel</h4>                      
+                    </div>
+                </div>
+                <div class="user-component__column">
+                    <div>
+                    <span>2</span>
+                    <i class="fas fa-chevron-right fa-xs"></i>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </main>
+
+ 
+
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__btn">
+                <a class="nav__link"href="friends.html"><i class="fas fa-user fa-2x"></i></a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link"href="chats.html"><span class="nav__notification badge">1</span><i class="far fa-comment fa-2x"></i></a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link"href="find.html"><i class="fas fa-search fa-2x"></i></a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link"href="more.html"><div class="nav__point"></div><i class="fas fa-ellipsis-h fa-2x"></i></a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="splash-screen">
+        <i class="fas fa-comment"></i>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
+</body>
+</html>
